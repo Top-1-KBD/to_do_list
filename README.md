@@ -45,11 +45,11 @@ Valider par « Y » (le y de oui).
 Dans le terminal de to_do_list, lancer la commande suivante : 
 
 ```bash
-.\venv\Scripts\activate // pour activer l'environnement virtuel
+.\venv\Scripts\activate <!-- pour activer l'environnement virtuel -->
 ```
 
 ```bash
-.\venv\Scripts\deactivate // pour désactiver l'environnement virtuel
+.\venv\Scripts\deactivate <!-- pour désactiver l'environnement virtuel -->
 ```
 
 lancer le projet avec la commande suivante : 

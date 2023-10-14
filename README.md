@@ -20,29 +20,43 @@ Nous sommes 4 à travailler sur une to-do list. Les membres sont :
 
 Ce projet utilise [Poetry](https://python-poetry.org/) pour la gestion des dépendances. Assurez-vous de l'avoir installé sur votre système.
 
-## Instruction 
+### Instruction 
 
 verifier que poetry est bien installé avec la commande suivante : 
 
-```bash : poetry install
-```bash : poetry --version
+```bash
+poetry install
+```
+
+```bash 
+poetry --version
+```
 
 installer l'environnement virtuel avec les commandes suivante : 
 
 Lancer Windows PowerShell en tant qu'administrateur et exécuter la commande suivante : 
 
-```bash : set-executionpolicy unrestricted 
+```bash
+set-executionpolicy unrestricted
+```
 
 Valider par « Y » (le y de oui).
 
 Dans le terminal de to_do_list, lancer la commande suivante : 
 
-```bash : .\.venv\Scripts\activate (pour activer l'environnement virtuel)
-```bash : .\.venv\Scripts\deactivate (pour désactiver l'environnement virtuel)
+```bash
+.\venv\Scripts\activate // pour activer l'environnement virtuel
+```
+
+```bash
+.\venv\Scripts\deactivate // pour désactiver l'environnement virtuel
+```
 
 lancer le projet avec la commande suivante : 
 
-```bash : poetry run python -m to_do_list
+```bash
+poetry run python -m to_do_list
+```
 
 ## Utilisation
 

@@ -13,7 +13,7 @@ setup(
     long_description=open('README.md').read(),
     long_description_content_type='text/markdown',
     url='https://github.com/Rayann237/to_do_list',
-    author='Votre Nom',  # Remplacez par votre nom
+    author='Erwan',  # Remplacez par votre nom
     author_email='elyes.rezzoug@telecom-paris.fr',
     license='MIT',
     packages=find_packages(exclude=['tests*']),

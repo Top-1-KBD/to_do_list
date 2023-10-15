@@ -50,4 +50,5 @@ jobs:
     - name: safety
       run: |
         pip install safety
+        pip install --upgrade setuptools
         safety check

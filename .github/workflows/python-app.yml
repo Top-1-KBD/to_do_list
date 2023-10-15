@@ -47,3 +47,7 @@ jobs:
         pip install pydocstyle
         pydocstyle .
     
+    - name: safety
+      run: |
+        pip install safety
+        safety check

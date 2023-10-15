@@ -1,3 +1,9 @@
+"""
+Configuration de l'installation pour le package `todolist`.
+
+Ce module configure les détails du package et les dépendances requises.
+"""
+
 from setuptools import setup, find_packages
 
 setup(

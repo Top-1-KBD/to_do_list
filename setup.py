@@ -3,7 +3,7 @@ from setuptools import setup, find_packages
 setup(
     name='todolist',
     version='0.1.0',  # Vous pouvez ajuster cette version selon vos besoins
-    description='Une bibliothèque simple pour gérer des tâches et des listes de tâches',
+    description='Bibliothèque pour gérer des tâches et des listes de tâches',
     long_description=open('README.md').read(),
     long_description_content_type='text/markdown',
     url='https://github.com/Rayann237/to_do_list',
@@ -26,6 +26,6 @@ setup(
         'Programming Language :: Python :: 3.10',
         'Programming Language :: Python :: 3.11',
     ],
-    keywords='todolist, tasks, task management',  # Ajoutez d'autres mots-clés pertinents
+    keywords='todolist, tasks, task management',
     python_requires='>=3.7, <4',
 )

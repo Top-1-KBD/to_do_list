@@ -18,6 +18,7 @@ setup(
     license='MIT',
     packages=find_packages(exclude=['tests*']),
     install_requires=[
+        # list of packages required to run this module
         'pytest>=7.4.2',
         'coverage>=7.3.2',
         'exceptiongroup==1.1.3',

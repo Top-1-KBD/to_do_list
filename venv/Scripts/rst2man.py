@@ -8,7 +8,7 @@
 """
 A module for converting ReStructuredText to man pages.
 
-This module provides a simple command line interface. 
+This module provides a simple command line interface.
 
 It uses the man page.
 

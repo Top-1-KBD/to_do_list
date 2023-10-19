@@ -7,7 +7,7 @@ This module configures package details and required dependencies.
 from setuptools import setup, find_packages
 
 setup(
-    name='todolist_RAME',
+    name='todolist_Telecom',
     version='0.1.0',  # Vous pouvez ajuster cette version selon vos besoins
     description='Bibliothèque pour gérer des tâches et des listes de tâches',
     long_description=open('README.md').read(),

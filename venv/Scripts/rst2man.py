@@ -6,13 +6,12 @@
 
 
 """
-
-man.py.
-======
-
 A module for converting ReStructuredText to man pages.
 
-This module provides a simple command line interface. It uses the man page
+This module provides a simple command line interface. 
+
+It uses the man page.
+
 writer to output from ReStructuredText source.
 """
 

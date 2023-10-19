@@ -6,8 +6,8 @@
 
 
 """
-
 A minimal front end to the Docutils Publisher.
+
 producing Lua/XeLaTeX code.
 """
 

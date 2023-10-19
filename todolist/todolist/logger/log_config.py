@@ -28,5 +28,14 @@ def setup_logger():
     error_fh.setFormatter(error_format)
     error_logger.addHandler(error_fh)
 
+    # Logger pour erreurs critiques
+    critical_logger = logging.getLogger("critical_logger")
+    critical_logger.setLevel(logging.CRITICAL)
+    critical_fh = logging.FileHandler("critical.log")
+    critical_format = logging.Formatter(
+        '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+        )
+    critical_fh.setFormatter(critical_format)
+    critical_logger.addHandler(critical_fh)
 
 setup_logger()

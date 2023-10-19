@@ -49,7 +49,7 @@ Thumbs.db
 
 # Environments
 .env
-venv/
+#venv/
 ENV/
 
 # Created by https://www.toptal.com/developers/gitignore/api/python

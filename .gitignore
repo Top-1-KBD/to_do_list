@@ -49,8 +49,12 @@ Thumbs.db
 
 # Environments
 .env
+.venv
+env/
 #venv/
 ENV/
+env.bak/
+venv.bak/
 
 # Created by https://www.toptal.com/developers/gitignore/api/python
 # Edit at https://www.toptal.com/developers/gitignore?templates=python
@@ -176,15 +180,6 @@ celerybeat.pid
 
 # SageMath parsed files
 *.sage.py
-
-# Environments
-.env
-.venv
-env/
-venv/
-ENV/
-env.bak/
-venv.bak/
 
 # Spyder project settings
 .spyderproject

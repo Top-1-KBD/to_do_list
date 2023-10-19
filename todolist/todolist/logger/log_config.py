@@ -38,4 +38,5 @@ def setup_logger():
     critical_fh.setFormatter(critical_format)
     critical_logger.addHandler(critical_fh)
 
+
 setup_logger()

@@ -4,9 +4,7 @@
 # Author: David Goodger <goodger@python.org>
 # Copyright: This module has been placed in the public domain.
 
-"""
-A minimal front end to the Docutils Publisher, producing HTML.
-"""
+"""A minimal front end to the Docutils Publisher, producing HTML."""
 
 try:
     import locale

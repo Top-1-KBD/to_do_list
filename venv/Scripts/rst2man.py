@@ -8,8 +8,8 @@
 man.py
 ======
 
-This module provides a simple command line interface that uses the
-man page writer to output from ReStructuredText source.
+This module provides a simple command line interface.
+that uses the man page writer to output from ReStructuredText source.
 """
 
 import locale

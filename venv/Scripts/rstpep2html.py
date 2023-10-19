@@ -5,7 +5,8 @@
 # Copyright: This module has been placed in the public domain.
 
 """
-A minimal front end to the Docutils Publisher, producing HTML from PEP
+A minimal front end to the Docutils Publisher, producing HTML from PEP.
+
 (Python Enhancement Proposal) documents.
 """
 

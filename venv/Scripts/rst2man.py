@@ -5,7 +5,8 @@
 # Copyright: This module has been placed in the public domain.
 
 """
-man.py
+
+man.py.
 ======
 
 This module provides a simple command line interface.

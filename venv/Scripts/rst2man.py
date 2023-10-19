@@ -5,12 +5,13 @@
 # Copyright: This module has been placed in the public domain.
 
 """
-
 man.py.
 ======
 
-This module provides a simple command line interface.
-that uses the man page writer to output from ReStructuredText source.
+A module for converting ReStructuredText to man pages.
+
+This module provides a simple command line interface. It uses the man page
+writer to output from ReStructuredText source.
 """
 
 import locale

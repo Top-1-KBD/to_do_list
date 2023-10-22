@@ -1,7 +1,8 @@
 import sqlite3
-from werkzeug.security import generate_password_hash, check_password_hash
+from werkzeug.security import generate_password_hash
 
 DB_NAME = 'users.db'
+
 
 def init_db():
     with sqlite3.connect(DB_NAME) as conn:
@@ -15,22 +16,33 @@ def init_db():
         ''')
         conn.commit()
 
+
 def add_user_to_db(username, password):
     with sqlite3.connect('users.db') as conn:
         cursor = conn.cursor()
-        password_hash = generate_password_hash(password)  # Assurez-vous d'importer cette fonction depuis werkzeug.security
+        password_hash = generate_password_hash(password)
         try:
-            cursor.execute("INSERT INTO users (username, password_hash, role) VALUES (?, ?, ?)", (username, password_hash, 'USER'))
+            cursor.execute(
+                "INSERT INTO users (username, password_hash, role) "
+                "VALUES (?, ?, ?)", 
+                (username, password_hash, 'USER')
+            )
             conn.commit()
         except sqlite3.IntegrityError:
-            # Ce bloc sera exécuté si l'ajout de l'utilisateur échoue en raison d'un doublon (car le champ username est une clé primaire).
+            # This block is executed if adding the user fails due to a 
+            # duplicate (because the username field is a primary key).
             raise Exception("Username already exists!")
+
 
 def get_user(username):
     with sqlite3.connect('users.db') as conn:
         cursor = conn.cursor()
-        cursor.execute('SELECT username, password_hash, role FROM users WHERE username = ?', (username,))
+        cursor.execute(
+            'SELECT username, password_hash, role FROM users WHERE username = ?', 
+            (username,)
+        )
         user = cursor.fetchone()
         return user
 
-init_db()  # Initialisation de la base de données lors de l'import du module
+
+init_db()  # Initialization of the database when importing the module

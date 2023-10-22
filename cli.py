@@ -1,5 +1,4 @@
 import argparse
-from todolist.models.database import init_db
 from todolist.models.database import init_db, add_user_to_db
 
 
@@ -19,9 +18,8 @@ def add_user(username, password):
 
 def main():
     parser = argparse.ArgumentParser(description='CLI for TO_DO_LIST application.')
-
     parser.add_argument('--initdb', action='store_true', help='Init the database.')
-    parser.add_argument('--adduser', nargs=2, metavar=('USERNAME', 'PASSWORD'), 
+    parser.add_argument('--adduser', nargs=2, metavar=('USERNAME', 'PASSWORD'),
     help='Add a user.')
 
     args = parser.parse_args()

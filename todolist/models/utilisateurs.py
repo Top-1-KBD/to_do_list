@@ -1,6 +1,7 @@
 from werkzeug.security import generate_password_hash, check_password_hash
 from .roles import Role
-from .database import add_user, get_user  # Importez les fonctions de la base de données
+# Importez les fonctions de la base de données
+from .database import add_user, get_user
 
 
 class User:
@@ -11,7 +12,6 @@ class User:
         self.username = username
         self.password_hash = generate_password_hash(password)
         self.role = role
-        
         # Ajoutez l'utilisateur à la base de données
         if not add_user(username, password, role):
             raise ValueError(f"Nom d'utilisateur '{username}' déjà pris")
@@ -23,7 +23,8 @@ class User:
         if user_data:
             username, password_hash, role = user_data
             user = cls(username, password_hash, role)
-            user.password_hash = password_hash  # Utilisez le hash du mot de passe directement
+            # Utilisez le hash du mot de passe directement
+            user.password_hash = password_hash
             return user
         return None
 

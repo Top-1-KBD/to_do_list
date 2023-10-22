@@ -1,3 +1,9 @@
+"""
+Module responsible for the User model.
+Defines the User class which represents an individual user, their attributes,
+and methods related to user authentication and interaction with the database.
+"""
+
 from werkzeug.security import generate_password_hash, check_password_hash
 from .roles import Role
 # Importez les fonctions de la base de données

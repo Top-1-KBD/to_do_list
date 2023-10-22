@@ -20,11 +20,11 @@ def main():
     parser = argparse.ArgumentParser(description='CLI for TDL application.')
     parser.add_argument('--initdb', action='store_true', help='Init the db.')
     parser.add_argument(
-    '--adduser',
-    nargs=2,
-    metavar=('USERNAME', 'PASSWORD'),
-    help='Add a user.'
-    )
+                        '--adduser',
+                        nargs=2,
+                        metavar=('USERNAME', 'PASSWORD'),
+                        help='Add a user.'
+                        )
 
     args = parser.parse_args()
 

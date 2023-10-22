@@ -1,9 +1,19 @@
+"""
+Module for managing user data in the ToDoList application database.
+
+This module provides functions for initializing the database, adding users,
+and getting user data.
+"""
+
 import sqlite3
 
-# Initialise la base de données
-
-
 def init_db():
+    """
+    Initialize the database.
+
+    Creates the 'users' table if it does not exist.
+
+    """
     with sqlite3.connect('users.db') as conn:
         cursor = conn.cursor()
         cursor.execute('''
@@ -15,10 +25,15 @@ def init_db():
         ''')
         conn.commit()
 
-# Ajoute un utilisateur à la base de données
-
-
 def add_user(username, password):
+    """
+    Add a new user to the database.
+
+    Args:
+        username (str): The username of the new user.
+        password (str): The password for the new user (hashed before storage).
+
+    """
     with sqlite3.connect('users.db') as conn:
         cursor = conn.cursor()
         cursor.execute(
@@ -28,10 +43,18 @@ def add_user(username, password):
         )
         conn.commit()
 
-# Obtient un utilisateur par nom d'utilisateur
-
-
 def get_user(username):
+    """
+    Get user data by username.
+
+    Args:
+        username (str): The username of the user to retrieve.
+
+    Returns:
+        tuple: A tuple containing user data (id, username, password) if found,
+        or None if not found.
+
+    """
     with sqlite3.connect('users.db') as conn:
         cursor = conn.cursor()
         cursor.execute("SELECT * FROM users WHERE username=?", (username,))

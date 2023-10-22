@@ -1,4 +1,4 @@
-"""Module for managing user data and,
+"""Module for managing user data and.
 
 authentication in the ToDoList application.
 

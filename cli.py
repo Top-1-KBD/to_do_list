@@ -4,14 +4,12 @@ from todolist.models.utilisateurs import User, users_db
 from todolist.models.database import init_db, add_user
 from todolist.exceptions.task_exceptions import TaskNotFoundError
 
-
 def initialize_database():
     """Initialize the database."""
     init_db()
     print("Database initialized successfully!")
 
-
-def add_user(username, password):
+def add_user_to_db(username, password):
     """Add a user to the database."""
     try:
         add_user(username, password)
@@ -19,14 +17,12 @@ def add_user(username, password):
     except Exception as e:
         print(f"Failed to add user: {e}")
 
-
 def add_task(task_list):
     """Add a task to the task list."""
     name = input("Enter task name: ")
     description = input("Enter task description: ")
     task_list.add_task(name, description)
     print("Task added successfully!")
-
 
 def remove_task(task_list):
     """Remove a task from the task list."""
@@ -36,7 +32,6 @@ def remove_task(task_list):
         print("Task removed successfully!")
     except TaskNotFoundError as e:
         print(f"Error: {e}")
-
 
 def list_tasks(task_list):
     """List all tasks in the task list."""
@@ -48,7 +43,6 @@ def list_tasks(task_list):
     else:
         print("No tasks found.")
 
-
 def list_users():
     """List all users in the user database."""
     if users_db:
@@ -57,7 +51,6 @@ def list_users():
             print(f"Username: {username}, Role: {user.role}")
     else:
         print("No users found.")
-
 
 def main():
     """Main entry point for the ToDoList CLI."""
@@ -73,7 +66,7 @@ def main():
         initialize_database()
     if args.adduser:
         username, password = args.adduser
-        add_user(username, password)
+        add_user_to_db(username, password)
 
     while True:
         print("Choose an option:")
@@ -97,7 +90,6 @@ def main():
             break
         else:
             print("Invalid choice. Please select a valid option.")
-
 
 if __name__ == '__main__':
     main()

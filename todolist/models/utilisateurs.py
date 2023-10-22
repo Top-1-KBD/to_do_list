@@ -3,11 +3,12 @@
 from werkzeug.security import generate_password_hash, check_password_hash
 import sqlite3
 
+
 class User:
     """Class representing a user."""
 
     def __init__(self, username, password, role='USER'):
-        """Initialize a new user with the given username, password, and role."""
+        """Init a new user with the given user, password, and role."""
         self.username = username
         self.password_hash = generate_password_hash(password)
         self.role = role
@@ -27,12 +28,14 @@ class User:
         """Check if the given password matches the user's password."""
         return check_password_hash(self.password_hash, password)
 
+
 # Fonction pour récupérer un utilisateur depuis la base de données SQLite
 def get_user(username):
     with sqlite3.connect('users.db') as conn:
         cursor = conn.cursor()
         cursor.execute("SELECT * FROM users WHERE username=?", (username,))
         return cursor.fetchone()
+
 
 class Database:
     def __init__(self):

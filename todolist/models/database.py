@@ -7,6 +7,7 @@ and getting user data.
 
 import sqlite3
 
+
 def init_db():
     """
     Initialize the database.
@@ -25,6 +26,7 @@ def init_db():
         ''')
         conn.commit()
 
+
 def add_user(username, password):
     """
     Add a new user to the database.
@@ -42,6 +44,7 @@ def add_user(username, password):
             (username, password)
         )
         conn.commit()
+
 
 def get_user(username):
     """

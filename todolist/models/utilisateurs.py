@@ -51,7 +51,7 @@ class Database:
     def get_user(self, username):
         return self.users_db.get(username)
 
-# Créez une instance de la base de données 
+# Créez une instance de la base de données
 # pour être utilisée dans d'autres parties de votre application
 
 

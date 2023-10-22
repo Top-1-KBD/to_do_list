@@ -71,7 +71,7 @@ def list_users():
 
 
 def main():
-    """serve main entry point for the ToDoList CLI."""
+    """Serve main entry point for the ToDoList CLI."""
     task_list = TaskList()
 
     parser = argparse.ArgumentParser(

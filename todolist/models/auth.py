@@ -17,9 +17,10 @@ def register(username, password):
     Returns:
         bool: True if the user was successfully registered, False otherwise.
 
-    This function adds a new user to the user database. If the username is already,
-    in use, the registration will fail and return False. Otherwise, the user is,
-    registered, and True is returned.
+    This function adds a new user to the user database.
+    If the username is already,
+    in use, the registration will fail and return False. 
+    Otherwise, the user is, registered, and True is returned.
     """
     hashed_password = generate_password_hash(password)
     add_user(username, hashed_password)
@@ -36,9 +37,10 @@ def login(username, password):
     Returns:
         bool: True if the login is successful, False otherwise.
 
-    This function checks if the provided user exists in the user database and if
-    the provided PW matches the stored PW hash for that username. If both
-    conditions are met, the login is considered successful, and True is returned.
+    This function checks if the provided user exists in the user database
+    and if the provided PW matches the stored PW hash for that username.
+    If both conditions are met, the login is considered successful,
+    and True is returned.
     Otherwise, the login fails, and False is returned.
     """
     user = get_user(username)

@@ -6,7 +6,7 @@ Contains methods to initialize the database, add users, and fetch user details.
 import sqlite3
 from werkzeug.security import generate_password_hash
 
-DB_NAME = 'users.db'
+DB_NAME = 'users_db'
 
 
 def init_db():
@@ -44,7 +44,7 @@ def add_user_to_db(username, password):
         Exception: If a user,
         with the given username already exists in the database.
     """
-    with sqlite3.connect('users.db') as conn:
+    with sqlite3.connect(DB_NAME) as conn:
         cursor = conn.cursor()
         password_hash = generate_password_hash(password)
         try:
@@ -70,7 +70,7 @@ def get_user(username):
         tuple: A tuple containing the user's username, password hash, and role.
               If no user is found, returns None.
     """
-    with sqlite3.connect('users.db') as conn:
+    with sqlite3.connect(DB_NAME) as conn:
         cursor = conn.cursor()
         cursor.execute(
             "SELECT username, password_hash,"

@@ -7,7 +7,9 @@ import argparse
 from todolist.models.database import init_db, add_user_to_db
 from todolist.models.task_list import TaskList
 from todolist.models.utilisateurs import Role
+from todolist.models.utilisateurs import users_db
 from todolist.exceptions.task_exceptions import TaskNotFoundError
+
 
 def initialize_database():
     """
@@ -18,6 +20,7 @@ def initialize_database():
     print("Initialising the database...")
     init_db()
     print("Database initialized successfully!")
+
 
 def add_user(username, password):
     """
@@ -36,6 +39,7 @@ def add_user(username, password):
     except Exception as e:
         print(f"Failed to add user: {e}")
 
+
 def add_task():
     """
     Add a task to the task list.
@@ -45,6 +49,7 @@ def add_task():
     description = input("Enter task description: ")
     task_list.add_task(name, description)
     print("Task added successfully!")
+
 
 def remove_task():
     """
@@ -58,6 +63,7 @@ def remove_task():
     except TaskNotFoundError as e:
         print(f"Error: {e}")
 
+
 def list_tasks():
     """
     List all tasks in the task list.
@@ -67,12 +73,14 @@ def list_tasks():
     for task in tasks:
         print(task)
 
+
 def list_users():
     """
     List all users in the user database.
     """
     for username, user in users_db.items():
         print(f"Username: {username}, Role: {user.role}")
+
 
 def main():
     """

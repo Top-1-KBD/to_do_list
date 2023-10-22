@@ -1,5 +1,5 @@
-"""
 
+"""
 CLI Module for the ToDoList application.
 Provides command line utilities to interact with the application.
 """
@@ -9,8 +9,8 @@ from todolist.models.database import init_db, add_user_to_db
 
 
 def initialize_database():
+    
     """
-
     Initialize the database.
     Displays messages about the status of the initialization process.
     """
@@ -20,9 +20,9 @@ def initialize_database():
 
 
 def add_user(username, password):
+    
     """
-
-    Adds a user to the database.
+    Add a user to the database.
     Args:
         username (str): The username to adds.
         password (str): The password for the user.
@@ -39,7 +39,7 @@ def add_user(username, password):
 def main():
     """
 
-    The Main entry point for the CLI.
+    Do Main entry point for the CLI.
     Processes command line arguments and executes the requested operations.
     """
     parser = argparse.ArgumentParser(description='CLI for TDL application.')

@@ -16,7 +16,6 @@ import sqlite3
 class User:
     """Class representing a user."""
 
-
     def __init__(self, username, password, role='USER'):
         """Initialize a new user with the given username, password, and role.
 
@@ -28,7 +27,6 @@ class User:
         self.username = username
         self.password_hash = generate_password_hash(password)
         self.role = role
-
 
     @classmethod
     def fetch_user(cls, username):
@@ -47,7 +45,6 @@ class User:
             user.password_hash = password_hash
             return user
         return None
-
 
     def check_password(self, password):
         """Check if the given password matches the user's password.
@@ -69,7 +66,8 @@ def get_user(username):
         username (str): The username to retrieve.
 
     Returns:
-        tuple or None: A tuple with user data (username, password hash, role) if found, None otherwise.
+        tuple or None: A tuple with user data,
+        (username, password hash, role) if found, None otherwise.
     """
     with sqlite3.connect('users.db') as conn:
         cursor = conn.cursor()
@@ -111,5 +109,8 @@ class Database:
         """
         return self.users_db.get(username)
 
-# Create an instance of the database to be used in other parts of your application
+# Create an instance of the database
+# to be used in other parts of your application
+
+
 users_db = Database()

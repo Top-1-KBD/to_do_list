@@ -29,7 +29,7 @@ class User:
         return check_password_hash(self.password_hash, password)
 
 
-# Fonction pour récupérer un utilisateur depuis la base de données SQLite
+# Fonction for recover an user from SQLite
 def get_user(username):
     with sqlite3.connect('users.db') as conn:
         cursor = conn.cursor()
@@ -39,7 +39,7 @@ def get_user(username):
 
 class Database:
     def __init__(self):
-        self.users_db = {}  # Utilisez un dictionnaire pour stocker les utilisateurs
+        self.users_db = {}  # Utilisez un dict pour stocker les users
 
     def add_user(self, username, password):
         if username not in self.users_db:
@@ -51,5 +51,8 @@ class Database:
     def get_user(self, username):
         return self.users_db.get(username)
 
-# Créez une instance de la base de données pour être utilisée dans d'autres parties de votre application
+# Créez une instance de la base de données 
+# pour être utilisée dans d'autres parties de votre application
+
+
 users_db = Database()

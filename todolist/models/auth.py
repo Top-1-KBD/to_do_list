@@ -31,7 +31,7 @@ def register(username, password):
 
 def login(username, password):
     """Log in a user with the given username and password.
-    
+
     Args:
         username (str): The username of the user attempting to log in.
         password (str): The password provided by the user for authentication.

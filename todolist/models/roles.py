@@ -3,6 +3,6 @@
 
 class Role:
     """Enum representing the various roles a user can have."""
-    
+
     ADMIN = "admin"
     USER = "user"

@@ -10,7 +10,7 @@ DB_NAME = 'users.db'
 
 
 def init_db():
-    
+
     """
 
     Init the db by creating the required tables if they don't exist.

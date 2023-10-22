@@ -19,7 +19,7 @@ def register(username, password):
 
     This function adds a new user to the user database.
     If the username is already,
-    in use, the registration will fail and return False. 
+    in use, the registration will fail and return False.
     Otherwise, the user is, registered, and True is returned.
     """
     hashed_password = generate_password_hash(password)

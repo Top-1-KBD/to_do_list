@@ -40,7 +40,7 @@ def add_user(username, password):
 
 def main():
     """
-    Main entry point for the CLI.
+    Serve as the main entry point for the CLI.
 
     Processes command line arguments and executes the requested operations.
     """

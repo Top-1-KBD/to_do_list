@@ -9,7 +9,7 @@ from todolist.models.database import init_db, add_user_to_db
 
 
 def initialize_database():
-    
+
     """
     Initialize the database.
     Displays messages about the status of the initialization process.
@@ -20,7 +20,7 @@ def initialize_database():
 
 
 def add_user(username, password):
-    
+
     """
     Add a user to the database.
     Args:

@@ -1,7 +1,5 @@
+"""Module responsible for database operations related to users.
 
-"""
-
-Module responsible for database operations related to users.
 Contains methods to initialize the database, add users, and fetch user details.
 """
 
@@ -12,6 +10,7 @@ DB_NAME = 'users.db'
 
 
 def init_db():
+    
     """
 
     Init the db by creating the required tables if they don't exist.

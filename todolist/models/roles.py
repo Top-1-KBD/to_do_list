@@ -1,4 +1,8 @@
-class Role:
+"""Module defining the roles for users in the to-do list application."""
 
-    USER = "user"
+
+class Role:
+    """Enum representing the various roles a user can have."""
+    
     ADMIN = "admin"
+    USER = "user"

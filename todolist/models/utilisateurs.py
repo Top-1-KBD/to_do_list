@@ -5,6 +5,7 @@ from werkzeug.security import generate_password_hash, check_password_hash
 
 class User:
     """Class representing a user."""
+    
     def __init__(self, username, password):
         """Initialize a new user with the given username and password."""
         self.username = username

@@ -1,6 +1,6 @@
 import argparse
 from todolist.models.task_list import TaskList
-from todolist.models.utilisateurs import User, users_db
+from todolist.models.utilisateurs import users_db
 from todolist.models.database import init_db, add_user
 from todolist.exceptions.task_exceptions import TaskNotFoundError
 
@@ -56,9 +56,20 @@ def main():
     """Main entry point for the ToDoList CLI."""
     task_list = TaskList()
 
-    parser = argparse.ArgumentParser(description='CLI for ToDoList application.')
-    parser.add_argument('--initdb', action='store_true', help='Initialize the database.')
-    parser.add_argument('--adduser', nargs=2, metavar=('USERNAME', 'PASSWORD'), help='Add a user.')
+    parser = argparse.ArgumentParser(
+        description='CLI for ToDoList application.'
+    )
+    parser.add_argument(
+        '--initdb',
+        action='store_true',
+        help='Initialize the database.'
+    )
+    parser.add_argument(
+        '--adduser',
+        nargs=2,
+        metavar=('USERNAME', 'PASSWORD'),
+        help='Add a user.'
+    )
 
     args = parser.parse_args()
 

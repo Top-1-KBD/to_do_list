@@ -1,4 +1,5 @@
 """
+
 Module responsible for database operations related to users.
 Contains methods to initialize the database, add users, and fetch user details.
 """
@@ -11,6 +12,7 @@ DB_NAME = 'users.db'
 
 def init_db():
     """
+
     Init the db by creating the required tables if they don't exist.
     Specifically, it creates a 'users' table.
     with columns for username (as primary key),
@@ -30,7 +32,7 @@ def init_db():
 
 def add_user_to_db(username, password):
     """
-    Adds a new user to the database.
+    Add a new user to the database.
 
     Args:
         username (str): The username of the new user.
@@ -57,7 +59,7 @@ def add_user_to_db(username, password):
 
 def get_user(username):
     """
-    Fetches a user from the database based on the given username.
+    Fetch a user from the database based on the given username.
 
     Args:
         username (str): The username of the user to fetch.

@@ -1,4 +1,5 @@
 """
+
 Module responsible for the User model.
 Defines the User class which represents an individual user, their attributes,
 and methods related to user authentication and interaction with the database.

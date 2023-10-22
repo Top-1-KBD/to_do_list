@@ -8,7 +8,7 @@ class User:
     """Class representing a user."""
 
     def __init__(self, username, password, role=Role.USER):
-        """Initialize a new user with the given username, password, and role."""
+        """Init a new user with the given username, password, and role."""
         self.username = username
         self.password_hash = generate_password_hash(password)
         self.role = role

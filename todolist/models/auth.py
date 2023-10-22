@@ -1,27 +1,18 @@
 """Module for authentication-related functions."""
 
-from models.utilisateurs import User, users_db
+# authentication.py
 
+from werkzeug.security import generate_password_hash, check_password_hash
+from .database import add_user, get_user
 
+# Enregistre un nouvel utilisateur
 def register(username, password):
-    """Register a new user with the given username and password."""
-    if username in users_db:
-        raise ValueError("User already exists")
-    user = User(username, password)
-    users_db[username] = user
+    hashed_password = generate_password_hash(password)
+    add_user(username, hashed_password)
 
-
-def login(username, password, session):
-    """Log in a user with the given username and password."""
-    user = users_db.get(username)
-    if user and user.check_password(password):
-        # Stocker le nom d'utilisateur dans la session
-        session['username'] = username
-        return {"status": "logged in", "username": username}
-    else:
-        return {"status": "failed"}
-
-
-def logout(session):
-    """Log out the current user."""
-    session.clear()  # Simule un dictionnaire de session
+# Connecte un utilisateur
+def login(username, password):
+    user = get_user(username)
+    if user and check_password_hash(user[2], password):
+        return True
+    return False

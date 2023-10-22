@@ -1,26 +1,16 @@
-"""Module responsible for the User model.
-
-Defines the User class which represents an individual user, their attributes,
-
-and methods related to user authentication and interaction with the database.
-"""
+# utilisateurs.py
 
 from werkzeug.security import generate_password_hash, check_password_hash
-from .roles import Role
-from .database import add_user, get_user
-
+import sqlite3
 
 class User:
     """Class representing a user."""
 
-    def __init__(self, username, password, role=Role.USER):
-        """Init a new user with the given username, password, and role."""
+    def __init__(self, username, password, role='USER'):
+        """Initialize a new user with the given username, password, and role."""
         self.username = username
         self.password_hash = generate_password_hash(password)
         self.role = role
-        # Ajoutez l'utilisateur à la base de données
-        if not add_user(username, password, role):
-            raise ValueError(f"Nom d'utilisateur '{username}' déjà pris")
 
     @classmethod
     def fetch_user(cls, username):
@@ -29,7 +19,6 @@ class User:
         if user_data:
             username, password_hash, role = user_data
             user = cls(username, password_hash, role)
-            # Utilisez le hash du mot de passe directement
             user.password_hash = password_hash
             return user
         return None
@@ -37,3 +26,27 @@ class User:
     def check_password(self, password):
         """Check if the given password matches the user's password."""
         return check_password_hash(self.password_hash, password)
+
+# Fonction pour récupérer un utilisateur depuis la base de données SQLite
+def get_user(username):
+    with sqlite3.connect('users.db') as conn:
+        cursor = conn.cursor()
+        cursor.execute("SELECT * FROM users WHERE username=?", (username,))
+        return cursor.fetchone()
+
+class Database:
+    def __init__(self):
+        self.users_db = {}  # Utilisez un dictionnaire pour stocker les utilisateurs
+
+    def add_user(self, username, password):
+        if username not in self.users_db:
+            user = User(username, password)
+            self.users_db[username] = user
+            return True
+        return False
+
+    def get_user(self, username):
+        return self.users_db.get(username)
+
+# Créez une instance de la base de données pour être utilisée dans d'autres parties de votre application
+users_db = Database()

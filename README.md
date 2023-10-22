@@ -69,6 +69,11 @@ Ajouter un utilisateur & mot de passe avec la commande suivante :
 ```bash
 python cli.py --adduser username password
 ```
+Lancer la console cli : 
+
+```bash
+python cli.py
+```
 
 ## Utilisation
 

@@ -41,9 +41,7 @@ def add_user(username, password):
 
 
 def add_task():
-    """
-    Add a task to the task list.
-    """
+    """Add a task to the task list."""
     task_list = TaskList()
     name = input("Enter task name: ")
     description = input("Enter task description: ")
@@ -52,9 +50,7 @@ def add_task():
 
 
 def remove_task():
-    """
-    Remove a task from the task list.
-    """
+    """Remove a task from the task list."""
     task_list = TaskList()
     name = input("Enter task name to remove: ")
     try:
@@ -65,9 +61,7 @@ def remove_task():
 
 
 def list_tasks():
-    """
-    List all tasks in the task list.
-    """
+    """List all tasks in the task list."""
     task_list = TaskList()
     tasks = task_list.display_tasks()
     for task in tasks:
@@ -75,9 +69,7 @@ def list_tasks():
 
 
 def list_users():
-    """
-    List all users in the user database.
-    """
+    """List all users in the user database."""
     for username, user in users_db.items():
         print(f"Username: {username}, Role: {user.role}")
 

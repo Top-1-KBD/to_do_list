@@ -10,6 +10,7 @@ from .database import add_user, get_user
 
 def register(username, password):
     """Register a new user with the given username and password.
+
     Args:
         username (str): The username of the new user.
         password (str): The password for the new user.
@@ -30,6 +31,7 @@ def register(username, password):
 
 def login(username, password):
     """Log in a user with the given username and password.
+    
     Args:
         username (str): The username of the user attempting to log in.
         password (str): The password provided by the user for authentication.

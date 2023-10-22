@@ -7,11 +7,13 @@ from .database import add_user, get_user
 
 # Enregistre un nouvel utilisateur
 
+
 def register(username, password):
     hashed_password = generate_password_hash(password)
     add_user(username, hashed_password)
 
 # Connecte un utilisateur
+
 
 def login(username, password):
     user = get_user(username)

@@ -15,7 +15,7 @@ def init_db():
     Specifically, it creates a 'users' table.
 
     with columns for username (as primary key),
-    
+
     password hash, and user role.
     """
     with sqlite3.connect(DB_NAME) as conn:

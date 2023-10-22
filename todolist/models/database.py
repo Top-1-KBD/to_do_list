@@ -10,12 +10,12 @@ DB_NAME = 'users.db'
 
 
 def init_db():
+    """Init the db by creating the required tables if they don't exist.
 
-    """
-
-    Init the db by creating the required tables if they don't exist.
     Specifically, it creates a 'users' table.
+
     with columns for username (as primary key),
+    
     password hash, and user role.
     """
     with sqlite3.connect(DB_NAME) as conn:

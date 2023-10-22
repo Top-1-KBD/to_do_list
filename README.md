@@ -54,10 +54,20 @@ Pour désactiver l'environnement virtuel :
 .\venv\Scripts\deactivate
 ```
 
-lancer le projet avec la commande suivante : 
+Lancer le projet avec la commande suivante : 
 
 ```bash
 poetry run python -m to_do_list
+```
+Lancer la base de donées avec la commande suivante : 
+
+```bash
+python cli.py --initdb
+```
+Ajouter un utilisateur & mot de passe avec la commande suivante : 
+
+```bash
+python cli.py --adduser username password
 ```
 
 ## Utilisation

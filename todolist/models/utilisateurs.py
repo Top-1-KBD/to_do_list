@@ -1,7 +1,6 @@
-"""Module for user-related classes and functions."""
-
 from werkzeug.security import generate_password_hash, check_password_hash
 from .roles import Role
+from .database import add_user, get_user  # Importez les fonctions de la base de données
 
 
 class User:
@@ -12,10 +11,22 @@ class User:
         self.username = username
         self.password_hash = generate_password_hash(password)
         self.role = role
+        
+        # Ajoutez l'utilisateur à la base de données
+        if not add_user(username, password, role):
+            raise ValueError(f"Nom d'utilisateur '{username}' déjà pris")
+
+    @classmethod
+    def fetch_user(cls, username):
+        """Fetch a user from the database by username."""
+        user_data = get_user(username)
+        if user_data:
+            username, password_hash, role = user_data
+            user = cls(username, password_hash, role)
+            user.password_hash = password_hash  # Utilisez le hash du mot de passe directement
+            return user
+        return None
 
     def check_password(self, password):
         """Check if the given password matches the user's password."""
         return check_password_hash(self.password_hash, password)
-
-
-users_db = {}

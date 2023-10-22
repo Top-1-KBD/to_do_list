@@ -11,8 +11,9 @@ DB_NAME = 'users.db'
 
 def init_db():
     """
-    Initializes the database by creating the required tables if they don't exist.
-    Specifically, it creates a 'users' table with columns for username (as primary key),
+    Init the db by creating the required tables if they don't exist.
+    Specifically, it creates a 'users' table.
+    with columns for username (as primary key),
     password hash, and user role.
     """
     with sqlite3.connect(DB_NAME) as conn:
@@ -37,7 +38,8 @@ def add_user_to_db(username, password):
         which will be hashed before storage.
 
     Raises:
-        Exception: If a user with the given username already exists in the database.
+        Exception: If a user,
+        with the given username already exists in the database.
     """
     with sqlite3.connect('users.db') as conn:
         cursor = conn.cursor()

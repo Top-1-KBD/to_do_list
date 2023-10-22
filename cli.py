@@ -20,11 +20,9 @@ def initialize_database():
 def add_user(username, password):
     """
     Adds a user to the database.
-    
     Args:
         username (str): The username to add.
         password (str): The password for the user.
-        
     Displays a success message if the user is added successfully,
     and an error message if there is an issue.
     """

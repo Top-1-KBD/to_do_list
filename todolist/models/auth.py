@@ -1,7 +1,10 @@
+"""Module for authentication-related functions."""
+
 from models.utilisateurs import User, users_db
 
 
 def register(username, password):
+    """Register a new user with the given username and password."""
     if username in users_db:
         raise ValueError("User already exists")
     user = User(username, password)
@@ -9,6 +12,7 @@ def register(username, password):
 
 
 def login(username, password):
+    """Log in a user with the given username and password."""
     user = users_db.get(username)
     if user and user.check_password(password):
         return {"status": "logged in", "username": username}
@@ -17,4 +21,5 @@ def login(username, password):
 
 
 def logout(session):
+    """Log out the current user."""
     session.clear()  # Simule un dictionnaire de session

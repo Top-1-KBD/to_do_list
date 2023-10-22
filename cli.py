@@ -1,3 +1,14 @@
+"""CLI Module for the ToDoList application.
+
+This module provides command line utilities.
+
+to interact with the ToDoList application.
+
+You can use this CLI to add tasks, remove tasks,
+
+list tasks, list users, and initialize the database.
+"""
+
 import argparse
 from todolist.models.task_list import TaskList
 from todolist.models.utilisateurs import users_db
@@ -60,7 +71,7 @@ def list_users():
 
 
 def main():
-    """Main entry point for the ToDoList CLI."""
+    """serve main entry point for the ToDoList CLI."""
     task_list = TaskList()
 
     parser = argparse.ArgumentParser(

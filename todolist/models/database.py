@@ -23,13 +23,13 @@ def add_user_to_db(username, password):
         password_hash = generate_password_hash(password)
         try:
             cursor.execute(
-                "INSERT INTO users (username, password_hash, role) "
-                "VALUES (?, ?, ?)", 
+                "INSERT INTO users (username, password_hash, role)"
+                "VALUES (?, ?, ?)",
                 (username, password_hash, 'USER')
             )
             conn.commit()
         except sqlite3.IntegrityError:
-            # This block is executed if adding the user fails due to a 
+            # This block is executed if adding the user fails due to a
             # duplicate (because the username field is a primary key).
             raise Exception("Username already exists!")
 
@@ -38,7 +38,8 @@ def get_user(username):
     with sqlite3.connect('users.db') as conn:
         cursor = conn.cursor()
         cursor.execute(
-            'SELECT username, password_hash, role FROM users WHERE username = ?', 
+            "SELECT username, password_hash,"
+            "role FROM users WHERE username = ?",
             (username,)
         )
         user = cursor.fetchone()

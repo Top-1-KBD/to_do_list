@@ -21,7 +21,7 @@ jobs:
       run: pip install setuptools wheel twine
 
       env:
-        TWINE_USERNAME: __token__
+        TWINE_USERNAME: PYPI_API_TOKEN
         TWINE_PASSWORD: ${{ secrets.PYPI_API_TOKEN }}
 
     - name: Build dist

@@ -8,11 +8,11 @@ from setuptools import setup, find_packages
 
 setup(
     name='todolist_Telecom',
-    version='0.1.0',  # Vous pouvez ajuster cette version selon vos besoins
+    version='1.0.2',  # Vous pouvez ajuster cette version selon vos besoins
     description='Bibliothèque pour gérer des tâches et des listes de tâches',
     long_description=open('README.md').read(),
     long_description_content_type='text/markdown',
-    url='https://github.com/Rayann237/to_do_list',
+    url='https://github.com/Top-1-KBD/to_do_list.git',
     author='Erwan',  # Remplacez par votre nom
     author_email='elyes.rezzoug@telecom-paris.fr',
     license='MIT',

@@ -3,17 +3,26 @@ name: Deploy to PyPI
 on: [push]
 
 jobs:
-      deploy:
-        runs-on: ubuntu-latest
-        steps:
-        - name: Checkout code
-          uses: actions/checkout@v2
-          
-        - name: Install Twine
-          run: pip install twine
-          
-        - name: Deploy to PyPI
-          run: twine upload dist/*
-          env:
-            TWINE_USERNAME: __token__
-            TWINE_PASSWORD: ${{ secrets.PYPI_API_TOKEN }}
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.11
+
+    - name: Install dependencies
+      run: |
+        pip install setuptools wheel twine
+
+    - name: Build dist
+      run: python setup.py sdist bdist_wheel
+
+    - name: Deploy to PyPI
+      run: twine upload dist/*
+      env:
+        TWINE_USERNAME: __token__
+        TWINE_PASSWORD: ${{ secrets.PYPI_API_TOKEN }}

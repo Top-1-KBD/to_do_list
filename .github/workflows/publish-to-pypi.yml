@@ -15,17 +15,15 @@ jobs:
         python-version: 3.11
 
     - name: Install dependencies
-      run: pip install twine
-      
-    - name: Install dependencies
-      run: pip install setuptools wheel twine
-
-      env:
-        TWINE_USERNAME: PYPI_API_TOKEN
-        TWINE_PASSWORD: ${{ secrets.PYPI_API_TOKEN }}
+      run: |
+        pip install twine
+        pip install setuptools wheel
 
     - name: Build dist
       run: python setup.py sdist bdist_wheel
 
     - name: Deploy to PyPI
       run: twine upload dist/*
+      env:
+        TWINE_USERNAME: __token__
+        TWINE_PASSWORD: ${{ secrets.PYPI_API_TOKEN }}

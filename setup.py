@@ -10,7 +10,7 @@ setup(
     name='todolist_Telecom',
     version='1.0.7',  # Vous pouvez ajuster cette version selon vos besoins
     description='Bibliothèque pour gérer des tâches et des listes de tâches',
-    long_description=open('README.md').read(),
+    long_description=open('README.md', encoding='utf-8').read(),
     long_description_content_type='text/markdown',
     url='https://github.com/Top-1-KBD/to_do_list.git',
     author='TOP1_organisation',  # Remplacez par votre nom

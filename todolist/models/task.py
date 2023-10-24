@@ -12,7 +12,7 @@ class Task:
         name: The name of the task.
         description: A brief description of the task.
         created_at: The datetime when the task was created.
-        completed: A boolean indicating if the task is completed or not.
+        complted: A boolean indicating if the task is completed or not.
     """
 
     def __init__(self, name: str, description: Optional[str] = ""):

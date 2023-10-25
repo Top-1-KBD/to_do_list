@@ -26,3 +26,6 @@ issue_format = "`#{issue} <https://github.com/python-trio/exceptiongroup/issues/
 
 [tool.black]
 line-length = 79
+
+[tool.pytest.ini_options]
+testpaths = ["."]

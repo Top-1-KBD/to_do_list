@@ -31,7 +31,7 @@ jobs:
 
     - name: Run Tests with Coverage > 90%
       run: |
-        coverage run -m pytest tests/
+        coverage run -m pytest todolist/tests/
         coverage report -m --fail-under=90
 
     - name: Install flake8

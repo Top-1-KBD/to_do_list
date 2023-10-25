@@ -1,4 +1,4 @@
-from todolist.models.task import Task
+from models.task import Task
 
 
 def test_task_creation():

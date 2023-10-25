@@ -1,5 +1,5 @@
-models Module
-=============
+models module
+=========
 
-.. automodule:: todolist.models
+.. automodule:: models
    :members:

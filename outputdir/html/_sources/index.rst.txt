@@ -14,7 +14,6 @@ toctree::
    logger
    models
    tests
-   Task List
    
 Indices and tables
 ==================

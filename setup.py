@@ -23,7 +23,8 @@ setup(
         'coverage>=7.3.2',
         'exceptiongroup==1.1.3',
         'pyt==1.0.5',
-        'safety==2.3.5'
+        'safety==2.3.5',
+        'Sphinx==7.2.6'
     ],
     classifiers=[
         'Development Status :: 3 - Alpha',

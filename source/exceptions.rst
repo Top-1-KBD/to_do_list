@@ -1,5 +1,5 @@
 exceptions Module
 =================
 
-.. automodule:: todolist.exceptions
+.. automodule:: exceptions
    :members:

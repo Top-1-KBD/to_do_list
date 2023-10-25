@@ -1,5 +1,5 @@
 logger Module
 =============
 
-.. automodule:: logger
+.. automodule:: todolist.logger
    :members:

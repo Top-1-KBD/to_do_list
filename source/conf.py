@@ -8,8 +8,9 @@
 import os
 import sys
 
-#sys.path.insert(0, os.path.abspath('../todolist'))
-sys.path.insert(0, os.path.abspath('../../todolist'))
+# sys.path.insert(0, os.path.abspath('../todolist'))
+# sys.path.insert(0, os.path.abspath('../../todolist'))
+sys.path.insert(0, os.path.abspath('..'))
 
 project = 'todolist'
 copyright = '2023, Armand'

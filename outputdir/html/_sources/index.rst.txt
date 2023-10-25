@@ -11,10 +11,11 @@ toctree::
    :caption: Contents:
 
    exceptions
+   logger
    models
    tests
-   logger
-
+   Task List
+   
 Indices and tables
 ==================
 

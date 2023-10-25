@@ -1,5 +1,5 @@
 tests Module
 ============
 
-.. automodule:: tests
+.. automodule:: todolist.tests
    :members:

@@ -52,3 +52,8 @@ jobs:
         pip install safety
         pip install --upgrade setuptools
         safety check
+  
+    - name: Generate Docs from Sphinx
+      run: |
+        cd docs
+        sphinx-build -M html . ../_build/html

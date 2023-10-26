@@ -10,10 +10,7 @@ toctree::
    :maxdepth: 2
    :caption: Contents:
 
-   exceptions
-   logger
-   models
-   tests
+   modules
    
 Indices and tables
 ==================

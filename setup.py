@@ -8,7 +8,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='todolist_Telecom',
-    version='1.0.8',  # Vous pouvez ajuster cette version selon vos besoins
+    version='1.0.17',  # Vous pouvez ajuster cette version selon vos besoins
     description='Bibliothèque pour gérer des tâches et des listes de tâches',
     long_description=open('README.md', encoding='utf-8').read(),
     long_description_content_type='text/markdown',
@@ -23,7 +23,8 @@ setup(
         'coverage>=7.3.2',
         'exceptiongroup==1.1.3',
         'pyt==1.0.5',
-        'safety==2.3.5'
+        'safety==2.3.5',
+        'Sphinx==7.2.6'
     ],
     classifiers=[
         'Development Status :: 3 - Alpha',

@@ -40,7 +40,7 @@ Lancer Windows PowerShell en tant qu'administrateur et exécuter la commande sui
 set-executionpolicy unrestricted
 ```
 
-Valider par « Y » (le y de oui).
+Valider par « O » (le o de oui).
 
 Dans le terminal de to_do_list, lancer la commande suivante : 
 

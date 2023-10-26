@@ -1,6 +1,6 @@
 import pytest
-from todolist.models.task_list import TaskList
-from todolist.exceptions.task_exceptions import TaskNotFoundError
+from models.task_list import TaskList
+from exceptions.task_exceptions import TaskNotFoundError
 
 
 def test_add_task():

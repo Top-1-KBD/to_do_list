@@ -28,6 +28,3 @@ line-length = 79
 
 [tool.pytest.ini_options]
 testpaths = ["."]
-
-[tool.sphinx.ini_options]
-testpaths = ["."]

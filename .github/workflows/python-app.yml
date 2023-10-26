@@ -56,5 +56,6 @@ jobs:
     - name: Generate Docs from Sphinx
       run: |
         cd docs
-        sphinx-build -M html docs docs/_build/html
+        sphinx-build -M html . ../_build/html
+
        

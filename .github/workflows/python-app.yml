@@ -57,5 +57,3 @@ jobs:
       run: |
         cd docs
         sphinx-build -M html . ../_build/html
-
-       

@@ -1,8 +1,8 @@
 """Module for managing tasks in a task list."""
 
 from typing import List
-from todolist.models.task import Task
-from todolist.exceptions.task_exceptions import TaskNotFoundError
+from models.task import Task
+from exceptions.task_exceptions import TaskNotFoundError
 
 
 class TaskList:

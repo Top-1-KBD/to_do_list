@@ -1,5 +1,5 @@
-todolist
-========
+to_do_list
+==========
 
 .. toctree::
    :maxdepth: 4
@@ -7,4 +7,5 @@ todolist
    exceptions
    logger
    models
+   setup
    tests

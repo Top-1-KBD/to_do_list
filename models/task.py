@@ -33,8 +33,14 @@ class Task:
         self.created_at = datetime.now()
         self.start_at = start_at
         self.end_at = end_at
-        self.duration = end_at - start_at if start_at and end_at else None
-        self.status = "to_do"
+        self.status = "to do"
+
+    def mark_as_to_do(self, start_at: Optional[datetime] = None,
+                      end_at: Optional[datetime] = None) -> None:
+        """Mark a task as to do."""
+        self.status = "to do"
+        self.start_at = start_at
+        self.end_at = end_at
 
     def mark_as_doing(self) -> None:
         """Mark a task as doing."""

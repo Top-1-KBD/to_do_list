@@ -24,35 +24,3 @@ class AssignedTo:
         self.id = id(self)  # Unique ID
         self.task = task
         self.user = user
-
-    def get_task(self):
-        """Get the task.
-
-        Returns:
-            task: the task
-        """
-        return self.task
-
-    def get_user(self):
-        """Get the user.
-
-        Returns:
-            user: the user
-        """
-        return self.user
-
-    def set_task(self, task):
-        """Set a task.
-
-        Args:
-            task (Task): a specific task
-        """
-        self.task = task
-
-    def set_user(self, user):
-        """Set a user.
-
-        Args:
-            user (User): a specific user
-        """
-        self.user = user

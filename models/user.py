@@ -20,4 +20,4 @@ class User:
         """
         self.id = id(self)  # Unique ID
         self.name = name
-        self.mdp = password
+        self.password = password

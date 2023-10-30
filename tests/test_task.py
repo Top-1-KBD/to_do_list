@@ -10,8 +10,8 @@ def test_task_creation():
                 start_at=datetime.strptime("2023-01-01", "%Y-%m-%d"), end_at=datetime.strptime("2023-01-02", "%Y-%m-%d"))
     assert task.name == "Test Task"
     assert task.description == "A simple task"
-    assert task.start_at == datetime.now()
-    assert task.end_at == datetime.now()+timedelta(days=1)
+    assert task.start_at == datetime.strptime("2023-01-01", "%Y-%m-%d")
+    assert task.end_at == datetime.strptime("2023-01-02", "%Y-%m-%d")
 
 
 def test_mark_as_to_do():

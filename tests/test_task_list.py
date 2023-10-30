@@ -1,5 +1,6 @@
 """Module for testing the TaskList model in the todolist application."""
 
+from datetime import datetime, timedelta
 import pytest
 from models.task_list import TaskList
 from exceptions.task_exceptions import TaskNotFoundError
@@ -28,12 +29,37 @@ def test_remove_task_failure():
         task_list.remove_task("Go for a run")
 
 
-def test_complete_task():
-    """Test the action of completing a task."""
+def test_to_do_task():
+    """Test the action of a task to do."""
     task_list = TaskList()
     task_list.add_task("Buy Groceries", "Buy fruits and vegetables")
-    task_list.complete_task("Buy Groceries")
-    assert task_list.tasks[0].completed == 1
+    task_list.to_do_task("Buy Groceries", start_at=datetime.now(),
+                         end_at=datetime.now()+timedelta(days=1))
+    assert task_list.tasks[0].status == "to do"
+
+
+def test_doing_task():
+    """Test the action of doing a task."""
+    task_list = TaskList()
+    task_list.add_task("Buy Groceries", "Buy fruits and vegetables")
+    task_list.doing_task("Buy Groceries")
+    assert task_list.tasks[0].status == "doing"
+
+
+def test_succeeded_task():
+    """Test the action of succeeding a task."""
+    task_list = TaskList()
+    task_list.add_task("Buy Groceries", "Buy fruits and vegetables")
+    task_list.succeeded_task("Buy Groceries")
+    assert task_list.tasks[0].status == "succeeded"
+
+
+def test_failed_task():
+    """Test the action of a failed task."""
+    task_list = TaskList()
+    task_list.add_task("Buy Groceries", "Buy fruits and vegetables")
+    task_list.failed_task("Buy Groceries")
+    assert task_list.tasks[0].status == "failed"
 
 
 def test_display_tasks():
@@ -41,7 +67,7 @@ def test_display_tasks():
     task_list = TaskList()
     task_list.add_task("Buy Groceries", "Buy fruits and vegetables")
     task_list.add_task("Go for a run", "5km run in the morning")
-    task_list.complete_task("Buy Groceries")
+    task_list.succeeded_task("Buy Groceries")
 
     displayed_tasks = task_list.display_tasks()
     assert len(displayed_tasks) == 1

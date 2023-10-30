@@ -7,7 +7,7 @@ from models.task import Task
 def test_task_creation():
     """Test the creation of a task."""
     task = Task(name="Test Task", description="A simple task",
-                start_at=datetime.now(), end_at=datetime.now()+timedelta(days=1))
+                start_at=datetime.strptime("2023-01-01", "%Y-%m-%d"), end_at=datetime.strptime("2023-01-02", "%Y-%m-%d"))
     assert task.name == "Test Task"
     assert task.description == "A simple task"
     assert task.start_at == datetime.now()
@@ -17,7 +17,7 @@ def test_task_creation():
 def test_mark_as_to_do():
     """Test marking a task as to do."""
     task = Task(name="Test Task", description="A simple task",
-                start_at=datetime.now(), end_at=datetime.now()+timedelta(days=1))
+                start_at=datetime.strptime("2023-01-01", "%Y-%m-%d"), end_at=datetime.strptime("2023-01-01", "%Y-%m-%d"))
     task.mark_as_to_do(start_at=datetime.now()+timedelta(days=1),
                        end_at=datetime.now()+timedelta(days=2))
     assert task.status == "to do"

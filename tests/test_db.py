@@ -28,7 +28,7 @@ def test_connect():
 
 
 def test_execute_query():
-    """Test that the execute_query() function executes a query and returns the results."""
+    """Test that the execute_query executes a query and returns the results."""
     conn = connect()
     cursor = conn.cursor()
     cursor.execute(

@@ -33,7 +33,8 @@ def test_to_do_task():
     """Test the action of a task to do."""
     task_list = TaskList()
     task_list.add_task("Buy Groceries", "Buy fruits and vegetables")
-    task_list.to_do_task("Buy Groceries", start_at=datetime.strptime("2023-01-01", "%Y-%m-%d"),
+    task_list.to_do_task("Buy Groceries",
+                         start_at=datetime.strptime("2023-01-01", "%Y-%m-%d"),
                          end_at=datetime.strptime("2023-01-02", "%Y-%m-%d"))
     assert task_list.tasks[0].status == "to do"
     assert task_list.tasks[0].start_at == datetime.strptime(

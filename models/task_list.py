@@ -15,7 +15,8 @@ class TaskList:
         self.tasks: List[Task] = []
 
     def add_task(self, name: str, description: str,
-                 start_at: Optional[datetime] = None, end_at: Optional[datetime] = None) -> None:
+                 start_at: Optional[datetime] = None,
+                 end_at: Optional[datetime] = None) -> None:
         """Add a new task to the list.
 
         Args:
@@ -28,7 +29,8 @@ class TaskList:
             task = Task(name, description)
         self.tasks.append(task)
 
-    def to_do_task(self, task_name: str, start_at: datetime, end_at: datetime) -> None:
+    def to_do_task(self, task_name: str,
+                   start_at: datetime, end_at: datetime) -> None:
         """Mark a task as to do.
 
         Args:

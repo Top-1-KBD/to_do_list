@@ -19,7 +19,8 @@ class Task:
     """
 
     def __init__(self, name: str, description: Optional[str] = "",
-                 start_at: Optional[datetime] = None, end_at: Optional[datetime] = None):
+                 start_at: Optional[datetime] = None,
+                 end_at: Optional[datetime] = None):
         """Initialize a new Task instance.
 
         Args:

@@ -12,7 +12,8 @@ def create_user():
     """This function creates a new user."""
 
     logging.basicConfig(filename='logs/create_user.log',
-                        level=logging.INFO, format='%(asctime)s - %(levelname)s: %(message)s')
+                        level=logging.INFO,
+                        format='%(asctime)s - %(levelname)s: %(message)s')
 
     parser = argparse.ArgumentParser(description='Create a new user')
     parser.add_argument('username', type=str, nargs='?',

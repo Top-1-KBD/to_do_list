@@ -59,20 +59,10 @@ Lancer le projet avec la commande suivante :
 ```bash
 poetry run python -m to_do_list
 ```
-Lancer la base de donées avec la commande suivante : 
+Lancer l'application en ligne de commande : 
 
 ```bash
-python cli.py --initdb
-```
-Ajouter un utilisateur & mot de passe avec la commande suivante : 
-
-```bash
-python cli.py --adduser username password
-```
-Lancer la console cli : 
-
-```bash
-python cli.py
+python app.py
 ```
 
 ## Utilisation
@@ -80,7 +70,8 @@ python cli.py
 Pour utiliser la bibliothèque, il suffit d'importer le module `to_do_list` et d'utiliser les fonctions suivantes :
 
 - `add_task(name, description)`: Ajoute une nouvelle tâche à la liste.
-- `complete_task(name)`: Marque une tâche comme terminée.
+- `succeeded_task(name)`: Marque une tâche comme terminée avec succès.
+- `failed_task(name)`: Marque une tâche comme terminée sans réussite.
 - `delete_task(name)`: Supprime une tâche de la liste.
-- `list_tasks()`: Affiche la liste des tâches en cours.
+- `list_tasks()`: Affiche la liste des tâches non terminées.
 

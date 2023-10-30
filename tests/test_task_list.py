@@ -1,6 +1,6 @@
 """Module for testing the TaskList model in the todolist application."""
 
-from datetime import datetime, timedelta
+from datetime import datetime
 import pytest
 from models.task_list import TaskList
 from exceptions.task_exceptions import TaskNotFoundError
@@ -33,9 +33,13 @@ def test_to_do_task():
     """Test the action of a task to do."""
     task_list = TaskList()
     task_list.add_task("Buy Groceries", "Buy fruits and vegetables")
-    task_list.to_do_task("Buy Groceries", start_at=datetime.now(),
-                         end_at=datetime.now()+timedelta(days=1))
+    task_list.to_do_task("Buy Groceries", start_at=datetime.strptime("2023-01-01", "%Y-%m-%d"),
+                         end_at=datetime.strptime("2023-01-02", "%Y-%m-%d"))
     assert task_list.tasks[0].status == "to do"
+    assert task_list.tasks[0].start_at == datetime.strptime(
+        "2023-01-01", "%Y-%m-%d")
+    assert task_list.tasks[0].end_at == datetime.strptime(
+        "2023-01-02", "%Y-%m-%d")
 
 
 def test_doing_task():

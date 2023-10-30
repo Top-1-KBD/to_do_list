@@ -8,7 +8,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='todolist_Telecom',
-    version='1.0.26',  # Vous pouvez ajuster cette version selon vos besoins
+    version='1.0.27',  # Vous pouvez ajuster cette version selon vos besoins
     description='Bibliothèque pour gérer des tâches et des listes de tâches',
     long_description=open('README.md', encoding='utf-8').read(),
     long_description_content_type='text/markdown',

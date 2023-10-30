@@ -1,1 +1,1 @@
-"""Package for all models used in the todolist application."""
+"""Package for the CLI of the todolist application."""

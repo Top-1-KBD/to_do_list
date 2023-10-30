@@ -8,7 +8,7 @@ from models.db import execute_query
 
 
 def connect_user():
-    """The function verifies if the user and the password is correct."""
+    """Verifie if the user and the password is correct."""
     logging.basicConfig(filename='logs/connect_user.log',
                         level=logging.INFO,
                         format='%(asctime)s - %(levelname)s: %(message)s')

@@ -8,21 +8,7 @@ from models.task import Task
 
 
 def create_task():
-    """
-    Create a new task instance.
-    Instance createwith a given name, description, start date, and end date.
-
-    If the name of the task is not provided as a command line argument,
-    the user will be prompted to enter it.
-    The user will also be prompted to enter the description,
-    start date, and end date of the task.
-
-    Raises:
-        ValueError: If the start or end date is not in the format YYYY-MM-DD.
-
-    Returns:
-        None
-    """
+    """Create a new task instance."""
     logging.basicConfig(filename='logs/create_task.log',
                         level=logging.INFO,
                         format='%(asctime)s - %(levelname)s: %(message)s')

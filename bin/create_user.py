@@ -9,7 +9,7 @@ from models.db import execute_query
 
 
 def create_user():
-    """The function creates a new user."""
+    """Create a new user."""
     logging.basicConfig(filename='logs/create_user.log',
                         level=logging.INFO,
                         format='%(asctime)s - %(levelname)s: %(message)s')

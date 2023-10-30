@@ -18,7 +18,7 @@ def create_task():
     start date, and end date of the task.
 
     Raises:
-        ValueError: If the start date or end date is not in the format YYYY-MM-DD.
+        ValueError: If the start or end date is not in the format YYYY-MM-DD.
 
     Returns:
         None
@@ -50,7 +50,8 @@ def create_task():
     date_regex = re.compile(r'\d{4}-\d{2}-\d{2}')
     if not date_regex.match(start_date):
         logging.error(
-            "Failed to create task: Invalid start date format '%s'", start_date)
+            "Failed to create task: Invalid start date format '%s'",
+            start_date)
         raise ValueError("Invalid date format. Please use YYYY-MM-DD format.")
 
     if not date_regex.match(end_date):

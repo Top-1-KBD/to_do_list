@@ -5,7 +5,7 @@ import getpass
 import logging
 import hashlib
 from models.user import User
-from models.db import connect, execute_query
+from models.db import execute_query
 
 
 def create_user():

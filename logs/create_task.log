@@ -1,0 +1,7 @@
+2023-10-27 06:36:47,282 - ERROR: Failed to create task: unsupported operand type(s) for -: 'str' and 'str'
+2023-10-27 06:41:10,808 - ERROR: Failed to create task: strptime() takes exactly 2 arguments (1 given)
+2023-10-27 06:46:17,158 - INFO: Task 'eat' created successfully
+2023-10-27 06:47:08,890 - ERROR: Failed to create task: Invalid start date format '2023 - 10 - 27 '
+2023-10-27 06:50:51,949 - ERROR: Failed to create task: Invalid start date format '2023 - 10 - 27'
+2023-10-27 06:52:35,932 - INFO: Task 'eat' created successfully
+2023-10-27 06:57:22,543 - INFO: Task 'eat' created successfully

@@ -45,6 +45,7 @@ target/
 # Logs and databases
 *.log
 *.sqlite
+*.db
 
 # OS generated files
 .DS_Store

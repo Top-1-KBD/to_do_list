@@ -1,6 +1,6 @@
 """Module for testing the Task model in the todolist application."""
 
-from datetime import datetime, timedelta
+from datetime import datetime
 from models.task import Task
 
 
@@ -18,9 +18,11 @@ def test_mark_as_to_do():
     """Test marking a task as to do."""
     task = Task(name="Test Task", description="A simple task",
                 start_at=datetime.strptime("2023-01-01", "%Y-%m-%d"), end_at=datetime.strptime("2023-01-01", "%Y-%m-%d"))
-    task.mark_as_to_do(start_at=datetime.now()+timedelta(days=1),
-                       end_at=datetime.now()+timedelta(days=2))
+    task.mark_as_to_do(start_at=datetime.strptime("2023-01-04", "%Y-%m-%d"),
+                       end_at=datetime.strptime("2023-01-05", "%Y-%m-%d"))
     assert task.status == "to do"
+    assert task.start_at == datetime.strptime("2023-01-04", "%Y-%m-%d")
+    assert task.end_at == datetime.strptime("2023-01-05", "%Y-%m-%d")
 
 
 def test_mark_as_doing():

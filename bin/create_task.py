@@ -9,8 +9,8 @@ from models.task import Task
 
 def create_task():
     """
-    Creates a new task instance with a given name, description,
-    start date, and end date.
+    Create a new task instance.
+    Instance createwith a given name, description, start date, and end date.
 
     If the name of the task is not provided as a command line argument,
     the user will be prompted to enter it.

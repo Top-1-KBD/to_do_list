@@ -1,4 +1,4 @@
-"""Connect a new user"""
+"""Connect a new user."""
 
 import argparse
 import getpass
@@ -8,8 +8,7 @@ from models.db import execute_query
 
 
 def connect_user():
-    """This function verifies if the user and the password is correct."""
-
+    """The function verifies if the user and the password is correct."""
     logging.basicConfig(filename='logs/connect_user.log',
                         level=logging.INFO,
                         format='%(asctime)s - %(levelname)s: %(message)s')

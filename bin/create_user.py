@@ -1,4 +1,4 @@
-"""Create a new user"""
+"""Create a new user."""
 
 import argparse
 import getpass
@@ -9,8 +9,7 @@ from models.db import execute_query
 
 
 def create_user():
-    """This function creates a new user."""
-
+    """The function creates a new user."""
     logging.basicConfig(filename='logs/create_user.log',
                         level=logging.INFO,
                         format='%(asctime)s - %(levelname)s: %(message)s')

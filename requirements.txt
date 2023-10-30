@@ -1,0 +1,6 @@
+sphinx
+pytest
+coverage
+exceptiongroup
+pyt
+safety

@@ -8,7 +8,8 @@ def list_tasks(user_id: int):
     """List all the of a user in the database."""
     task_list = TaskList()
 
-    query = "SELECT * FROM tasks INNER JOIN assigned_to ON id = id_task where u.id = ?"
+    query = """SELECT * FROM tasks INNER JOIN
+            assigned_to ON id = id_task where u.id = ?"""
     values = (user_id,)
 
     results = execute_query(query, values)

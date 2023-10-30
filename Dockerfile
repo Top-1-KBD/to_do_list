@@ -18,7 +18,8 @@ COPY models /app/models
 COPY exceptions /app/exceptions
 COPY docs /app/docs
 COPY logs /app/logs
-COPY create_user.py /app/create_user.py
-COPY create_task.py /app/create_task.py
+COPY bin /app/bin
+COPY app.py /app/app.py
+COPY To_do_list.db /app/To_do_list.db
 # Commande à exécuter lorsque le conteneur démarre
 CMD ["python3"]
